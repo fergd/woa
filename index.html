@@ -1,0 +1,89 @@
+---
+layout: default
+---
+  <header>
+    <h1>Foo</h1>
+  </header>
+  <div role="content">
+    <article ng-controller="MainController">
+      <header>
+        <h1>[[ title ]]</h1>
+      </header>
+      <form>
+        <fieldset>
+          <legend>Title &amp; Location</legend>
+          <label for="title">Resource title</label>
+          <input type="text" id="title" placeholder="Resource title">
+          <label for="source">URL</label>
+          <input type="text" id="source" placeholder="URL">
+        </fieldset>
+
+        <fieldset>
+          <legend>Category</legend>
+          <ul>
+            <li>
+              <label for="web">Web</label>
+              <input type="radio" id="web">
+            </li>
+            <li>
+              <label for="Books">Books</label>
+              <input type="radio" id="Books">
+            </li>
+            <li>
+              <label for="Podcast">Podcast</label>
+              <input type="radio" id="Podcast">
+            </li>
+            <li>
+              <label for="Notes">Notes</label>
+              <input type="radio" id="Notes">
+            </li>
+          </ul>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Tags</legend>
+          <label for="tags"></label>
+          <input type="text" id="tags">
+        </fieldset>
+
+        <div>
+          <button type="submit" value="submit">Add Resource</button>
+        </div>
+      </form>
+    </article>
+    <article>
+      <header>
+        <h1>Resources Status &amp; Tools</h1>
+      </header>
+      <div>
+        <div>
+          <h2>32 resources</h2>
+        </div>
+        <div>
+          <button>Add New</button>
+          <button>Manage Resources</button>
+        </div>
+      </div>
+      <ul>
+        <li>Web</li>
+        <li>Podcast</li>
+        <li>Books</li>
+        <li>Notes</li>
+      </ul>
+      <section>
+        <h2>Current list</h2>
+        <ul>
+          <li>
+            <div>Podcast [cat title]</div>
+            <div>
+              <h2>Designer's corner [resource title]</h2>
+            </div>
+            <div>
+              <span>[tag]</span>
+            </div>
+            <a href="" rel="external">Go to resource</a>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </div>
