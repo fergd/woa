@@ -3,7 +3,7 @@
 Variables
 
 ******************************************************************/
-$black:             #272532;
+
 $white:             #f2f2f2;
 $cream:				#EEE7DA;
 $bailys:			#D0BFAD;
@@ -11,10 +11,12 @@ $light-dirt:		#9F9896;
 $dirt:				#625E65;
 $brick:				#926D66;
 $orange:			#CC9673;
+$yellow:			#EFB175;
 
-$text-color:        $orange;
+$text-color:        $dirt;
+$black:             darken($dirt, 30%);
 
-$link-color:        $black;
+$link-color:        $orange;
 $link-hover:        darken($link-color, 9%);
 
 $alert-red:					#c0392b;
@@ -22,8 +24,6 @@ $alert-green:				#27ae60;
 $alert-blue:				#2980b9;
 
 
-
-$text-color:       $black;
 $background-color: $cream;
 $brand-color:      $brick;
 

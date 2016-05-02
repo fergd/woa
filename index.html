@@ -1,89 +1,141 @@
+--- 
+layout: default 
 ---
-layout: default
----
-  <header>
-    <h1>Foo</h1>
-  </header>
-  <div role="content">
-    <article ng-controller="MainController">
-      <header>
-        <h1>[[ title ]]</h1>
-      </header>
-      <form>
-        <fieldset>
-          <legend>Title &amp; Location</legend>
-          <label for="title">Resource title</label>
-          <input type="text" id="title" placeholder="Resource title">
-          <label for="source">URL</label>
-          <input type="text" id="source" placeholder="URL">
-        </fieldset>
-
-        <fieldset>
-          <legend>Category</legend>
-          <ul>
-            <li>
-              <label for="web">Web</label>
-              <input type="radio" id="web">
-            </li>
-            <li>
-              <label for="Books">Books</label>
-              <input type="radio" id="Books">
-            </li>
-            <li>
-              <label for="Podcast">Podcast</label>
-              <input type="radio" id="Podcast">
-            </li>
-            <li>
-              <label for="Notes">Notes</label>
-              <input type="radio" id="Notes">
-            </li>
-          </ul>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Tags</legend>
-          <label for="tags"></label>
-          <input type="text" id="tags">
-        </fieldset>
-
-        <div>
-          <button type="submit" value="submit">Add Resource</button>
-        </div>
-      </form>
-    </article>
+<div role="content">
+    <!-- <article ng-controller="MainController">
+        <header>
+            <h1>[[ title ]]</h1>
+        </header>
+        <form>
+            <fieldset>
+                <legend>Title &amp; Location</legend>
+                <label for="title">Resource title</label>
+                <input type="text" id="title" placeholder="Resource title">
+                <label for="source">URL</label>
+                <input type="text" id="source" placeholder="URL">
+            </fieldset>
+            <fieldset>
+                <legend>Category</legend>
+                <ul>
+                    <li>
+                        <label for="web">Web</label>
+                        <input type="radio" id="web">
+                    </li>
+                    <li>
+                        <label for="Books">Books</label>
+                        <input type="radio" id="Books">
+                    </li>
+                    <li>
+                        <label for="Podcast">Podcast</label>
+                        <input type="radio" id="Podcast">
+                    </li>
+                    <li>
+                        <label for="Notes">Notes</label>
+                        <input type="radio" id="Notes">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Tags</legend>
+                <label for="tags"></label>
+                <input type="text" id="tags">
+            </fieldset>
+            <div>
+                <button type="submit" value="submit">Add Resource</button>
+            </div>
+        </form>
+    </article> -->
     <article>
-      <header>
-        <h1>Resources Status &amp; Tools</h1>
-      </header>
-      <div>
-        <div>
-          <h2>32 resources</h2>
-        </div>
-        <div>
-          <button>Add New</button>
-          <button>Manage Resources</button>
-        </div>
-      </div>
-      <ul>
-        <li>Web</li>
-        <li>Podcast</li>
-        <li>Books</li>
-        <li>Notes</li>
-      </ul>
-      <section>
-        <h2>Current list</h2>
-        <ul>
-          <li>
-            <div>Podcast [cat title]</div>
-            <div>
-              <h2>Designer's corner [resource title]</h2>
+        <header class="is-hidden">
+            <h1>Resources Status &amp; Tools</h1>
+        </header>
+        <div class="stats-control">
+            <div class="status">
+                <h2><span>32</span><br>resources</h2>
             </div>
-            <div>
-              <span>[tag]</span>
+            <div class="buttons-group">
+                <button type="submit">Add New
+                    <i class="icon-add">
+                		<svg xmlns="http://www.w3.org/2000/svg">
+						    <path d="M0 0h24v24H0z" fill="none"/>
+						    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+						</svg>	
+                	</i>
+                </button>
+                <button>Manage Resources
+                    <i class="icon-edit">
+                		<svg xmlns="http://www.w3.org/2000/svg">
+						    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+						    <path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+                	</i>
+                </button>
             </div>
-            <a href="" rel="external">Go to resource</a>
-          </li>
+        </div>
+        <ul class="not-style-type category-tabs">
+            <li class="is-website">Web</li>
+            <li class="is-podcast">Podcast</li>
+            <li class="is-book">Books</li>
+            <li class="is-notes">Notes</li>
         </ul>
-      </section>
+        <section class="resources-list">
+            <h2>Your Resources</h2>
+            <ul class="no-style-type">
+                <li class="resource-item-wrapper item-has-animation">
+                    <div class="re-category is-podcast"><span class="is-hidden">Book</span></div>
+                    <div class="re-middle">
+                        <div class="re-title is-ellipsis">
+                            <span>Angular Fundamentals</span>
+                        </div>
+                        <div class="re-info">
+                            <span>Book</span>
+                            <span>dated</span>
+                        </div>
+                    </div>
+                    <a href="#" rel="external" class="re-link hidden-text">Go to resource
+						<svg xmlns="http://www.w3.org/2000/svg">
+						    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+						    <path d="M0-.25h24v24H0z" fill="none"/>
+						</svg>
+                    </a>
+                </li>
+                <li class="resource-item-wrapper item-has-animation">
+                    <div class="re-category is-website"><span class="is-hidden">Book</span></div>
+                    <div class="re-middle">
+                        <div class="re-title is-ellipsis">
+                            <span>Angular Fundamentals</span>
+                        </div>
+                        <div class="re-info">
+                            <span>Book</span>
+                            <span>dated</span>
+                        </div>
+                    </div>
+                    <a href="#" rel="external" class="re-link hidden-text">Go to resource
+						<svg xmlns="http://www.w3.org/2000/svg">
+						    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+						    <path d="M0-.25h24v24H0z" fill="none"/>
+						</svg>
+                    </a>
+                </li>
+                <li class="resource-item-wrapper item-has-animation">
+                    <div class="re-category is-book"><span class="is-hidden">Book</span></div>
+                    <div class="re-middle">
+                        <div class="re-title is-ellipsis">
+                            <span>Angular Fundamentals</span>
+                        </div>
+                        <div class="re-info">
+                            <span>Book</span>
+                            <span>dated</span>
+                        </div>
+                    </div>
+                    <a href="#" rel="external" class="re-link hidden-text">Go to resource
+						<svg xmlns="http://www.w3.org/2000/svg">
+						    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+						    <path d="M0-.25h24v24H0z" fill="none"/>
+						</svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </article>
-  </div>
+</div>
